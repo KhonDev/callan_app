@@ -11,6 +11,7 @@ final userDB = FirebaseFirestore.instance.collection('users');
 final chatDB = FirebaseFirestore.instance.collection('chat');
 
 User? currentUser;
+String? groups;
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -72,8 +73,8 @@ class _HomeScreenState extends State<HomeScreen> {
             'username': userName,
             'photoUrl': user.photoUrl.toString(),
             'email': user.email,
-            'displayName': user.displayName,
             'isadmin': false,
+            'groups' : groups,
           });
           document = await userDB.doc(user.id).get();
         }

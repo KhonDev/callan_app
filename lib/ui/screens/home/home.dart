@@ -2,7 +2,6 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:testforfirebaseflutter/domain/entity/user.dart';
-import 'package:testforfirebaseflutter/ui/screens/edite_profile.dart';
 import 'package:testforfirebaseflutter/ui/screens/home/home_screen.dart';
 import 'package:testforfirebaseflutter/ui/screens/news_widget.dart';
 import 'package:testforfirebaseflutter/ui/widgets/carousel_item.dart';
@@ -54,7 +53,7 @@ class _CallanState extends State<Home> {
                         Row(
                           children: [
                             HomeTile(
-                              title: 'Callan Coin',
+                              title: 'Coin',
                               subTitle: 'Coming Soon',
                               leading: CircleAvatar(
                                 backgroundColor: Colors.lightBlue,
@@ -114,7 +113,7 @@ class _CallanState extends State<Home> {
                               onPressed: () => Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => NewScreen(),
+                                  builder: (context) =>NewScreen(),
                                 ),
                               ),
                             ),
