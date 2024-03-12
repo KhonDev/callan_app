@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:testforfirebaseflutter/ui/screens/edite_profile.dart';
 
 class Social extends StatelessWidget {
   const Social({super.key});
@@ -8,19 +8,30 @@ class Social extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: GridView(
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
         ),
         children: [
-          Padding(
-            padding: const EdgeInsets.all(28.0),
+          const Padding(
+            padding: EdgeInsets.all(28.0),
             child: CircleAvatar(),
-          ),Padding(
-            padding: const EdgeInsets.all(28.0),
+          ),
+          const Padding(
+            padding: EdgeInsets.all(28.0),
             child: CircleAvatar(),
-          ),Padding(
-            padding: const EdgeInsets.all(28.0),
+          ),
+          const Padding(
+            padding: EdgeInsets.all(28.0),
             child: CircleAvatar(),
+          ),
+          IconButton(
+            onPressed: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const EditProfile(),
+              ),
+            ),
+            icon: const Icon(Icons.edit),
           ),
         ],
       ),
